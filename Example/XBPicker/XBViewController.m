@@ -7,6 +7,7 @@
 //
 
 #import "XBViewController.h"
+#import <XBPicker/XBPicker.h>
 
 @interface XBViewController ()
 
@@ -17,7 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    XBPicker *picker = [XBPicker new];
+    picker.contents = @[@[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        ];
+    picker.titleLabel.text = @"日期";
+    [picker show];
 }
 
 - (void)didReceiveMemoryWarning

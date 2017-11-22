@@ -1,0 +1,6 @@
+framework module XBPicker {
+  umbrella header "XBPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
