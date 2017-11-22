@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XBPicker_Example' do
+  pod 'XBPicker', :path => '../'
+
+  target 'XBPicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
