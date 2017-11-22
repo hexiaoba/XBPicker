@@ -9,6 +9,21 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```
+    XBPicker *picker = [XBPicker new];
+    picker.contents = @[
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"],
+                        @[@"1", @"2", @"3"]
+                       ];
+    [picker show];
+    [picker setResultBlock:^(NSArray *results) {
+        NSLog(@"%@", results);
+    }];
+```
+
 ## Requirements
 
 ## Installation
@@ -27,3 +42,5 @@ bubiqudong, hkn35135@163.com
 ## License
 
 XBPicker is available under the MIT license. See the LICENSE file for more info.
+
+

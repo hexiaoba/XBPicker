@@ -29,8 +29,10 @@
                         @[@"1", @"2", @"3"],
                         @[@"1", @"2", @"3"],
                         ];
-    picker.titleLabel.text = @"日期";
     [picker show];
+    [picker setResultBlock:^(NSArray *results) {
+        NSLog(@"%@", results);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
