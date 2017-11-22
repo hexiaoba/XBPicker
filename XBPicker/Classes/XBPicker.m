@@ -81,10 +81,16 @@ static CGFloat const DayPickerShowDimissAnimationDuration = 0.5f;
 
 - (void)setContents:(NSArray *)contents {
     _contents = contents;
+    
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:contents.count];
-    for (NSInteger i = 0; i < contents.count; i++) {
-        [array addObject:@""];
+    for (NSArray *tempArr in contents) {
+        NSString *firstStr = @"";
+        if (tempArr.count) {
+            firstStr = tempArr.firstObject;
+        }
+        [array addObject:firstStr];
     }
+  
     self.selectedResults = array;
     [self.pickerView reloadAllComponents];
 }
